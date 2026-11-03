@@ -3,109 +3,201 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lahore-shoes77 - Luxury Footwear Lahore</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Lahore-shoes77 | LUXE by Kit Shoes</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Montserrat',sans-serif;background:#0a0a0a;color:#fff;overflow-x:hidden}
-.header{text-align:center;padding:35px 20px;border-bottom:1px solid #1a1a1a;position:sticky;top:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(10px);z-index:10}
-.logo{font-family:'Cormorant Garamond',serif;font-size:38px;color:#d4af37;letter-spacing:5px;font-weight:700}
-.sub{color:#888;font-size:11px;letter-spacing:4px;margin-top:8px;text-transform:uppercase}
-.hero{text-align:center;padding:50px 20px 20px}
-.hero h1{font-family:'Cormorant Garamond';font-size:44px;font-weight:400;line-height:1.1}
+body{font-family:'Montserrat',sans-serif;background:#060606;color:#fff}
+.header{text-align:center;padding:28px 20px;border-bottom:1px solid #1f1a0e;background:#0a0a0a;position:sticky;top:0;z-index:20}
+.logo{font-family:'Cormorant Garamond';font-size:42px;color:#d4af37;letter-spacing:8px;font-weight:300}
+.logo b{font-weight:700}
+.sub{color:#6b5a2a;font-size:10px;letter-spacing:5px;margin-top:8px}
+.hero{text-align:center;padding:60px 20px 25px;background:radial-gradient(ellipse at top,#1a160c 0%,#060606 60%)}
+.hero h1{font-family:'Cormorant Garamond';font-size:48px;font-weight:300;line-height:1.1}
 .hero h1 span{color:#d4af37;font-style:italic}
-.hero p{color:#666;font-size:11px;letter-spacing:3px;margin-top:12px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:20px;max-width:520px;margin:0 auto}
-@media(max-width:380px){.grid{grid-template-columns:1fr}}
-.card{background:#111;border:1px solid #d4af37;border-radius:14px;overflow:hidden;position:relative;transition:0.3s}
-.card:hover{transform:translateY(-3px)}
-.card.out{opacity:0.5;border-color:#333}
-.card img{width:100%;height:240px;object-fit:cover;background:#000;display:block}
-.badge{position:absolute;top:10px;left:10px;padding:5px 10px;border-radius:20px;font-size:10px;font-weight:600;letter-spacing:0.5px}
-.in-stock{background:#1a3a1a;color:#6fdc6f;border:1px solid #2a5a2a}
-.out-stock{background:#3a1a1a;color:#ff6f6f;border:1px solid #5a2a2a}
-.card-body{padding:14px;text-align:center}
-.card-body h3{font-family:'Cormorant Garamond';font-size:13px;color:#d4af37;letter-spacing:1px;min-height:32px;display:flex;align-items:center;justify-content:center}
-.file-name{font-size:9px;color:#555;margin:4px 0;word-break:break-all}
-.price{margin:8px 0;color:#fff;font-size:16px;font-weight:500;font-family:'Cormorant Garamond'}
-.wa{margin-top:10px;background:#d4af37;color:#000;padding:12px;border-radius:8px;display:block;text-decoration:none;font-weight:600;font-size:12px;border:none;width:100%;cursor:pointer;letter-spacing:0.5px}
-.wa:disabled{background:#333;color:#777;cursor:not-allowed}
-.wa:hover:not(:disabled){background:#c19b2e}
-.footer{text-align:center;padding:30px 20px;font-size:11px;color:#555;border-top:1px solid #1a1a1a;margin-top:20px;line-height:1.8;letter-spacing:1px}
+.hero p{color:#4a422c;font-size:11px;letter-spacing:4px;margin-top:15px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:20px;max-width:560px;margin:0 auto}
+@media(max-width:400px){.grid{grid-template-columns:1fr}}
+.card{background:linear-gradient(145deg,#121212,#0a0a0a);border:1px solid #2a2414;border-radius:20px;overflow:hidden;position:relative;transition:0.4s}
+.card:hover{transform:translateY(-5px);border-color:#d4af37;box-shadow:0 0 25px rgba(212,175,55,0.2)}
+.card.out{opacity:0.5}
+.card img{width:100%;height:300px;object-fit:cover;background:#0a0a0a;display:block}
+.badge{position:absolute;top:12px;left:12px;padding:6px 12px;border-radius:30px;font-size:9px;font-weight:700;letter-spacing:1px}
+.in-stock{background:rgba(26,58,26,0.9);color:#7CFC8A;border:1px solid #2a5a2a}
+.out-stock{background:rgba(58,26,26,0.9);color:#FF8A8A;border:1px solid #5a2a2a}
+.card-body{padding:16px 14px;text-align:center}
+.card-body h3{font-family:'Cormorant Garamond';font-size:14px;color:#d4af37;letter-spacing:1px;font-weight:600}
+.price{margin:8px 0;color:#fff;font-size:18px;font-family:'Cormorant Garamond'}
+.wa{margin-top:12px;background:linear-gradient(135deg,#d4af37,#b8941f);color:#000;padding:13px;border-radius:12px;font-weight:700;font-size:11px;border:none;width:100%;cursor:pointer;letter-spacing:1.5px;text-transform:uppercase}
+.wa:disabled{background:#222;color:#555}
+.footer{text-align:center;padding:30px 20px;font-size:10px;color:#3a3520;border-top:1px solid #1a160c;margin-top:20px;letter-spacing:2px;line-height:2}
 .footer span{color:#d4af37}
-#popup{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
+#chatBtn{position:fixed;bottom:25px;right:20px;width:62px;height:62px;background:linear-gradient(135deg,#d4af37,#8a6a14);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:100;box-shadow:0 8px 25px rgba(212,175,55,0.4);font-size:28px;animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(212,175,55,0.7)}70%{box-shadow:0 0 0 12px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}
+#chatBox{position:fixed;bottom:95px;right:15px;width:360px;max-width:94vw;height:480px;background:#0f0f0f;border:1px solid #d4af37;border-radius:20px;z-index:99;display:none;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.9)}
+#chatBox.open{display:flex}
+.chatHead{background:linear-gradient(135deg,#1a160c,#0f0f0f);padding:16px 18px;border-bottom:1px solid #2a2414;display:flex;justify-content:space-between;align-items:center}
+.chatHead b{font-family:'Cormorant Garamond';color:#d4af37;letter-spacing:2px;font-size:14px}
+.chatHead small{color:#555;font-size:10px;display:block}
+.chatMsgs{flex:1;padding:15px;overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+.msg{max-width:88%;padding:11px 15px;border-radius:16px;font-size:12.5px;line-height:1.6;white-space:pre-wrap}
+.msg.bot{background:#1a1a1a;color:#ccc;border:1px solid #222;align-self:flex-start;border-bottom-left-radius:4px}
+.msg.user{background:#d4af37;color:#000;align-self:flex-end;font-weight:500;border-bottom-right-radius:4px}
+.chatInput{display:flex;padding:12px;border-top:1px solid #1a1a1a;background:#0a0a0a}
+.chatInput input{flex:1;background:#1a1a1a;border:1px solid #2a2414;border-radius:12px;padding:12px 14px;color:#fff;font-size:12px;outline:none}
+.chatInput button{background:#d4af37;border:none;padding:0 18px;border-radius:12px;margin-left:8px;font-weight:700;cursor:pointer}
+#popup{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.88);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
 #popup.show{display:flex}
-.popup-box{background:#1a1a1a;border:1px solid #d4af37;border-radius:16px;padding:30px 25px;text-align:center;max-width:320px;width:100%}
-.popup-box h2{font-family:'Cormorant Garamond';color:#ff6f6f;font-size:26px}
-.popup-box p{color:#aaa;font-size:13px;margin:15px 0 20px;line-height:1.6}
-.popup-box button{background:#d4af37;color:#000;padding:12px 30px;border:none;border-radius:8px;font-weight:700;cursor:pointer;width:100%}
+.popup-box{background:#111;border:1px solid #d4af37;border-radius:20px;padding:32px 26px;text-align:center;max-width:330px;width:100%}
 </style>
 </head>
 <body>
 
 <div class="header">
-<div class="logo">Lahore-shoes77</div>
-<div class="sub">LUXE by Kit Shoes • Lahore</div>
+<div class="logo">Lahore-<b>shoes77</b></div>
+<div class="sub">luxe by kit shoes • lahore • @luxestorepk</div>
 </div>
 
 <div class="hero">
 <h1>Curated <span>Comfort</span><br>Meets Couture</h1>
-<p>4 EXCLUSIVE VARIETIES • LUXURY COLLECTION</p>
+<p>OWNER: LAHORE-SHOES77 • SMART AI ASSISTANT • 24/7</p>
 </div>
 
-<div class="grid" id="grid"></div>
+<div class="grid" id="grid">
+<div style="grid-column:1/-1;text-align:center;padding:40px;color:#d4af37">Loading luxury collection...</div>
+</div>
 
 <div class="footer">
-<span>Lahore-shoes77</span> • Secure Checkout • Free Shipping Rs.2000+<br>
-WhatsApp Orders Only • <span>0303 6043288</span> • 24/7 Support
+<span>LAHORE-SHOES77</span> • OWNER: Lahore-shoes77<br>
+WhatsApp Orders: <span>0303 6043288</span> • Free Shipping Rs.2000+<br>
+AI Powered • Secure • Luxury Collection<br>
+luxestorepk.github.io/Lahore-shoes77
+</div>
+
+<div id="chatBtn" onclick="toggleChat()">💬</div>
+<div id="chatBox">
+<div class="chatHead"><div><b>LUXE SMART AI</b><small>Owner: Lahore-shoes77 • Online</small></div><span onclick="toggleChat()" style="cursor:pointer;font-size:22px;color:#666">×</span></div>
+<div class="chatMsgs" id="chatMsgs">
+<div class="msg bot">Salam! Main LUXE SMART AI hun ✨
+
+Owner: Lahore-shoes77
+Store: @luxestorepk
+
+Mujhse kuch bhi pucho:
+• Price? Stock? Size?
+• Delivery? Payment?
+• Color? Konsa best hai?
+• WhatsApp number?
+
+Urdu/English dono me jawab dunga! 👠</div>
+</div>
+<div class="chatInput">
+<input id="chatInput" placeholder="Kuch bhi pucho... price, size, delivery?" onkeypress="if(event.key==='Enter')sendChat()">
+<button onclick="sendChat()">➤</button>
+</div>
 </div>
 
 <div id="popup" onclick="if(event.target.id==='popup')this.classList.remove('show')">
 <div class="popup-box">
-<h2>Out of Stock</h2>
-<p id="popupText"></p>
-<button onclick="document.getElementById('popup').classList.remove('show')">OK</button>
+<h2 style="font-family:'Cormorant Garamond';color:#ff6f6f;font-size:26px">Out of Stock</h2>
+<p id="popupText" style="color:#aaa;font-size:13px;margin:15px 0 20px"></p>
+<button onclick="document.getElementById('popup').classList.remove('show')" style="background:#d4af37;color:#000;padding:12px 30px;border:none;border-radius:10px;font-weight:700;width:100%">OK, dusra dekhta hun</button>
 </div>
 </div>
 
 <script>
-// STOCK CONTROL - yahan true/false se control karo
-const products = [
-  {id:1, name:"FARA Bow Loafer", price:"Rs. 2800", file:"image1-color-black-golden-silver.jpg", inStock:true, qty:15},
-  {id:2, name:"FARA Bow Loafer", price:"Rs. 3500", file:"image2-color-black-golden-silver.jpg", inStock:true, qty:10},
-  {id:3, name:"Crystal Bow Pump", price:"Rs. 2500", file:"image3-color-golden-black-silver.jpg", inStock:false, qty:0},
-  {id:4, name:"Bow Sling Back", price:"Rs. 3000", file:"image4-color-maroon-black-beige.jpg", inStock:true, qty:12}
-];
-
-const grid = document.getElementById('grid');
-products.forEach(p=>{
-  let badge = p.inStock ? `<div class="badge in-stock">In Stock • ${p.qty} left</div>` : `<div class="badge out-stock">Out of Stock</div>`;
-  grid.innerHTML += `
-    <div class="card ${p.inStock?'':'out'}">
-      ${badge}
-      <img src="images/${p.file}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/400x400/111/d4af37?text=${encodeURIComponent(p.file)}'">
-      <div class="card-body">
-        <h3>${p.name}</h3>
-        <div class="file-name">${p.file}</div>
-        <div class="price">${p.price}</div>
-        <button class="wa" ${p.inStock?'':'disabled'} onclick="handleOrder(${p.id})">${p.inStock?'Order on WhatsApp':'Out of Stock'}</button>
-      </div>
-    </div>
-  `;
-});
+let productsCache = [];
+async function loadProducts(){
+  const grid = document.getElementById('grid');
+  try{
+    const res = await fetch('https://api.github.com/repos/luxestorepk/Lahore-shoes77/contents');
+    const files = await res.json();
+    const images = files.filter(f=>f.name.match(/\.(jpg|jpeg|png|webp)$/i)).map(f=>f.name).sort();
+    const finalImages = images.length>=1?images:["image1-color-golden-black-silver.jpg","image2-color-black-golden-silver.jpg","image3-color-golden-black-silver.jpg","image4-color-maroon-black-beige.jpg"];
+    const data = [
+      {name:"FARA Bow Loafer - Golden", price:"Rs. 2800", inStock:true, qty:15, sizes:"36-42", colors:"Golden, Black, Silver", desc:"Daily comfort + bow style"},
+      {name:"FARA Bow Loafer - Black", price:"Rs. 3500", inStock:true, qty:10, sizes:"36-41", colors:"Black, Golden, Silver", desc:"Premium FARA best seller"},
+      {name:"Crystal Bow Pump - Golden", price:"Rs. 2500", inStock:false, qty:0, sizes:"37-42", colors:"Golden, Black, Silver", desc:"Party wear crystal pump"},
+      {name:"Bow Sling Back - Maroon", price:"Rs. 3000", inStock:true, qty:12, sizes:"36-42", colors:"Maroon, Black, Beige", desc:"Elegant sling back"}
+    ];
+    grid.innerHTML="";
+    finalImages.slice(0,4).forEach((fileName,i)=>{
+      const p = {...(data[i]||data[0]), file:fileName, id:i+1};
+      productsCache.push(p);
+      let badge = p.inStock?`<div class="badge in-stock">● IN STOCK • ${p.qty} LEFT</div>`:`<div class="badge out-stock">● OUT OF STOCK</div>`;
+      grid.innerHTML+=`<div class="card ${p.inStock?'':'out'}">${badge}<img src="./${fileName}?v=${Date.now()}" alt="${p.name}" loading="lazy"><div class="card-body"><h3>${p.name}</h3><div class="price">${p.price}</div><button class="wa" ${p.inStock?'':'disabled'} onclick="handleOrder(${p.id})">${p.inStock?'Order on WhatsApp':'Out of Stock'}</button></div></div>`;
+    });
+  }catch(e){
+    grid.innerHTML="<div style='grid-column:1/-1;text-align:center;padding:20px;color:#aaa'>Images load ho rahi hain... page refresh karo</div>";
+  }
+}
 
 function handleOrder(id){
-  const p = products.find(x=>x.id===id);
+  const p = productsCache.find(x=>x.id===id);
   if(!p.inStock){
-    document.getElementById('popupText').innerText = `${p.name}\n${p.file}\n${p.price} abhi Out of Stock hai. WhatsApp 0303 6043288 pe rabta karein restock ke liye.`;
-    document.getElementById('popup').classList.add('show');
-    return;
+    document.getElementById('popupText').innerText=`${p.name} - ${p.price} abhi Out of Stock hai. WhatsApp 0303 6043288 pe restock ka pucho.`;
+    document.getElementById('popup').classList.add('show'); return;
   }
-  const message = `Salam Lahore-shoes77! Mujhe ye order chahiye:\n\nProduct: ${p.name}\nFile: ${p.file}\nPrice: ${p.price}\nStock: Available (${p.qty} left)\n\nPlease confirm.`;
-  const url = `https://wa.me/923036043288?text=${encodeURIComponent(message)}`;
-  window.open(url, '_blank');
+  const msg=`Salam Lahore-shoes77! Mujhe order chahiye:\n\nProduct: ${p.name}\nFile: ${p.file}\nPrice: ${p.price}\nSize: ${p.sizes}\nColor: ${p.colors}\n\nPlease confirm availability.`;
+  window.open(`https://wa.me/923036043288?text=${encodeURIComponent(msg)}`,'_blank');
 }
-</script>
 
+// SMART AI - HAR SAWAL KA JAWAB
+function toggleChat(){document.getElementById('chatBox').classList.toggle('open');}
+function sendChat(){
+  const input = document.getElementById('chatInput');
+  const txt = input.value.trim(); if(!txt) return;
+  const msgs = document.getElementById('chatMsgs');
+  msgs.innerHTML+=`<div class="msg user">${txt}</div>`; input.value='';
+  
+  const lower = txt.toLowerCase();
+  let reply = "";
+
+  if(lower.match(/salam|hello|hi|hey|aoa/)){
+    reply = "Walaikum Salam! ✨ Lahore-shoes77 me khush amdeed! Kya help chahiye? Price, size, delivery?";
+  }
+  else if(lower.match(/price|kitne|rate|paisa|qemat|pkr|rs/)){
+    reply = "💰 PRICES - Lahore-shoes77:\n\n1. FARA Golden - Rs.2800 (15 pcs IN STOCK)\n2. FARA Black - Rs.3500 (10 pcs IN - Best Seller)\n3. Crystal Pump - Rs.2500 (OUT OF STOCK ❌)\n4. Maroon Sling - Rs.3000 (12 pcs IN)\n\nFree Shipping Rs.2000+ pe!\nWhatsApp: 0303 6043288";
+  }
+  else if(lower.match(/stock|available|hai|mil|bacha|left|out/)){
+    reply = "📦 LIVE STOCK:\n\n✅ image1 Golden: 15 pcs IN\n✅ image2 Black: 10 pcs IN\n❌ image3 Golden: OUT - Restock 1 week me\n✅ image4 Maroon: 12 pcs IN\n\nJo OUT hai uske liye WhatsApp pe pre-book kar sakte ho.";
+  }
+  else if(lower.match(/size|number|36|37|38|39|40|41|42/)){
+    reply = "👠 SIZE GUIDE:\n\nEuropean sizes 36-42\n• 36 = 22.5cm\n• 37 = 23cm\n• 38 = 23.8cm\n• 39 = 24.5cm\n• 40 = 25.2cm\n• 41 = 26cm\n• 42 = 26.5cm\n\nFARA Loafer sab sizes me comfortable hai. Apna size batao me check kar dunga!";
+  }
+  else if(lower.match(/color|rang|colour|golden|black|silver|maroon|beige/)){
+    reply = "🎨 COLORS AVAILABLE:\n\n• Black: Classic, har dress ke sath\n• Golden: Party wear, luxury look\n• Silver: Modern shine\n• Maroon: Elegant, bridal\n• Beige: Nude, daily use\n\nHar shoe me 3 colors ka combo hai - Jaise Black-Golden-Silver!";
+  }
+  else if(lower.match(/delivery|ship|pohanch|time|kab|lahore|karachi|islamabad/)){
+    reply = "🚚 DELIVERY - Lahore-shoes77:\n\n• Lahore: 2-3 din\n• Karachi/Islamabad: 3-4 din\n• Other cities: 4-5 din\n• Free shipping Rs.2000+\n• Cash on Delivery available\n• WhatsApp tracking milega";
+  }
+  else if(lower.match(/payment|cash|easypaisa|jazz|bank|advance/)){
+    reply = "💳 PAYMENT OPTIONS:\n\n• Cash on Delivery (COD) ✅\n• Easypaisa / JazzCash\n• Bank Transfer\n• No advance for Lahore\n• Other cities 20% advance\n\nWhatsApp pe payment details bhej dunga: 0303 6043288";
+  }
+  else if(lower.match(/owner|username|kis|kon|luxe|storepk|lahore-shoes77/)){
+    reply = "👑 STORE INFO:\n\nOwner: Lahore-shoes77\nUsername: @luxestorepk\nStore: LUXE by Kit Shoes\nLocation: Lahore (Online Only)\nWhatsApp: 0303 6043288\nWebsite: luxestorepk.github.io/Lahore-shoes77\n\n24/7 AI Support yahi hun! ✨";
+  }
+  else if(lower.match(/best|sasta|mehnga|acha|recommend|suggest|konsa/)){
+    reply = "⭐ RECOMMENDATION:\n\n• Daily Use: FARA Black Rs.3500 (Most Comfortable)\n• Party: Golden Rs.2800 (Luxury Look)\n• Budget: Maroon Rs.3000 (Elegant + Affordable)\n• Best Seller: FARA Black Golden Silver - 10 pcs left!\n\nApna use batao, me best suggest karunga!";
+  }
+  else if(lower.match(/whatsapp|number|contact|rabta|call/)){
+    reply = "📱 CONTACT:\n\nWhatsApp: 0303 6043288 (0303-6043288)\nClick: https://wa.me/923036043288\nOwner: Lahore-shoes77\n\nDirect order ke liye kisi bhi shoe pe 'Order on WhatsApp' dabao, auto message chala jayega!";
+  }
+  else if(lower.match(/return|exchange|wapis|change/)){
+    reply = "🔄 RETURN POLICY:\n\n• 7 days return\n• Size issue pe free exchange\n• Damage pe full refund\n• WhatsApp pe video bhejo\n• Lahore me 1 day exchange";
+  }
+  else{
+    reply = `Samajh gaya! "${txt}" ke liye:\n\nMain Lahore-shoes77 ka SMART AI hun ✨\n\nMujhse ye pucho:\n• "Price kya hai?"\n• "Size 38 hai?"\n• "Delivery kab?"\n• "Golden kaunsa hai?"\n• "Stock me hai?"\n• "WhatsApp number?"\n\nYa direct WhatsApp karo: 0303 6043288\n\nKya help karun? 👠`;
+  }
+
+  setTimeout(()=>{
+    msgs.innerHTML+=`<div class="msg bot">${reply}</div>`;
+    msgs.scrollTop=msgs.scrollHeight;
+  },500);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+loadProducts();
+</script>
 </body>
 </html>
