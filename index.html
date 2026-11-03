@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lahore-shoes77 - Luxury Footwear Lahore</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Montserrat',sans-serif;background:#0a0a0a;color:#fff;overflow-x:hidden}
+.header{text-align:center;padding:35px 20px;border-bottom:1px solid #1a1a1a;position:sticky;top:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(10px);z-index:10}
+.logo{font-family:'Cormorant Garamond',serif;font-size:38px;color:#d4af37;letter-spacing:5px;font-weight:700}
+.sub{color:#888;font-size:11px;letter-spacing:4px;margin-top:8px;text-transform:uppercase}
+.hero{text-align:center;padding:50px 20px 20px}
+.hero h1{font-family:'Cormorant Garamond';font-size:44px;font-weight:400;line-height:1.1}
+.hero h1 span{color:#d4af37;font-style:italic}
+.hero p{color:#666;font-size:11px;letter-spacing:3px;margin-top:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:20px;max-width:520px;margin:0 auto}
+@media(max-width:380px){.grid{grid-template-columns:1fr}}
+.card{background:#111;border:1px solid #d4af37;border-radius:14px;overflow:hidden;position:relative;transition:0.3s}
+.card:hover{transform:translateY(-3px)}
+.card.out{opacity:0.5;border-color:#333}
+.card img{width:100%;height:240px;object-fit:cover;background:#000;display:block}
+.badge{position:absolute;top:10px;left:10px;padding:5px 10px;border-radius:20px;font-size:10px;font-weight:600;letter-spacing:0.5px}
+.in-stock{background:#1a3a1a;color:#6fdc6f;border:1px solid #2a5a2a}
+.out-stock{background:#3a1a1a;color:#ff6f6f;border:1px solid #5a2a2a}
+.card-body{padding:14px;text-align:center}
+.card-body h3{font-family:'Cormorant Garamond';font-size:13px;color:#d4af37;letter-spacing:1px;min-height:32px;display:flex;align-items:center;justify-content:center}
+.file-name{font-size:9px;color:#555;margin:4px 0;word-break:break-all}
+.price{margin:8px 0;color:#fff;font-size:16px;font-weight:500;font-family:'Cormorant Garamond'}
+.wa{margin-top:10px;background:#d4af37;color:#000;padding:12px;border-radius:8px;display:block;text-decoration:none;font-weight:600;font-size:12px;border:none;width:100%;cursor:pointer;letter-spacing:0.5px}
+.wa:disabled{background:#333;color:#777;cursor:not-allowed}
+.wa:hover:not(:disabled){background:#c19b2e}
+.footer{text-align:center;padding:30px 20px;font-size:11px;color:#555;border-top:1px solid #1a1a1a;margin-top:20px;line-height:1.8;letter-spacing:1px}
+.footer span{color:#d4af37}
+#popup{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
+#popup.show{display:flex}
+.popup-box{background:#1a1a1a;border:1px solid #d4af37;border-radius:16px;padding:30px 25px;text-align:center;max-width:320px;width:100%}
+.popup-box h2{font-family:'Cormorant Garamond';color:#ff6f6f;font-size:26px}
+.popup-box p{color:#aaa;font-size:13px;margin:15px 0 20px;line-height:1.6}
+.popup-box button{background:#d4af37;color:#000;padding:12px 30px;border:none;border-radius:8px;font-weight:700;cursor:pointer;width:100%}
+</style>
+</head>
+<body>
+
+<div class="header">
+<div class="logo">Lahore-shoes77</div>
+<div class="sub">LUXE by Kit Shoes • Lahore</div>
+</div>
+
+<div class="hero">
+<h1>Curated <span>Comfort</span><br>Meets Couture</h1>
+<p>4 EXCLUSIVE VARIETIES • LUXURY COLLECTION</p>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="footer">
+<span>Lahore-shoes77</span> • Secure Checkout • Free Shipping Rs.2000+<br>
+WhatsApp Orders Only • <span>0303 6043288</span> • 24/7 Support
+</div>
+
+<div id="popup" onclick="if(event.target.id==='popup')this.classList.remove('show')">
+<div class="popup-box">
+<h2>Out of Stock</h2>
+<p id="popupText"></p>
+<button onclick="document.getElementById('popup').classList.remove('show')">OK</button>
+</div>
+</div>
+
+<script>
+// STOCK CONTROL - yahan true/false se control karo
+const products = [
+  {id:1, name:"FARA Bow Loafer", price:"Rs. 2800", file:"image1-color-black-golden-silver.jpg", inStock:true, qty:15},
+  {id:2, name:"FARA Bow Loafer", price:"Rs. 3500", file:"image2-color-black-golden-silver.jpg", inStock:true, qty:10},
+  {id:3, name:"Crystal Bow Pump", price:"Rs. 2500", file:"image3-color-golden-black-silver.jpg", inStock:false, qty:0},
+  {id:4, name:"Bow Sling Back", price:"Rs. 3000", file:"image4-color-maroon-black-beige.jpg", inStock:true, qty:12}
+];
+
+const grid = document.getElementById('grid');
+products.forEach(p=>{
+  let badge = p.inStock ? `<div class="badge in-stock">In Stock • ${p.qty} left</div>` : `<div class="badge out-stock">Out of Stock</div>`;
+  grid.innerHTML += `
+    <div class="card ${p.inStock?'':'out'}">
+      ${badge}
+      <img src="images/${p.file}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/400x400/111/d4af37?text=${encodeURIComponent(p.file)}'">
+      <div class="card-body">
+        <h3>${p.name}</h3>
+        <div class="file-name">${p.file}</div>
+        <div class="price">${p.price}</div>
+        <button class="wa" ${p.inStock?'':'disabled'} onclick="handleOrder(${p.id})">${p.inStock?'Order on WhatsApp':'Out of Stock'}</button>
+      </div>
+    </div>
+  `;
+});
+
+function handleOrder(id){
+  const p = products.find(x=>x.id===id);
+  if(!p.inStock){
+    document.getElementById('popupText').innerText = `${p.name}\n${p.file}\n${p.price} abhi Out of Stock hai. WhatsApp 0303 6043288 pe rabta karein restock ke liye.`;
+    document.getElementById('popup').classList.add('show');
+    return;
+  }
+  const message = `Salam Lahore-shoes77! Mujhe ye order chahiye:\n\nProduct: ${p.name}\nFile: ${p.file}\nPrice: ${p.price}\nStock: Available (${p.qty} left)\n\nPlease confirm.`;
+  const url = `https://wa.me/923036043288?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
